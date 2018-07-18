@@ -10,3 +10,16 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
+
+
+export const API_URL = 'http://horascomplementares-cloud.umbler.net/api/';  
+export const APP_KEY = 'base64:7e5rV9ZfeAz55LKbaVKyq5ljsiK7qBqh/6lgu1Rs+Gk=';
+
+
+export function getJwt() {
+  if (localStorage.getItem('jwt') && localStorage.getItem('jwt') != ' ') {
+    return localStorage.getItem('jwt')
+  }else{
+    return false;
+  }
+}
